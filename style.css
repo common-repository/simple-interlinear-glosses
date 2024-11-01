@@ -1,0 +1,54 @@
+﻿/* YOU CAN USE THIS FILE TO DEFINE YOUR OWN STYLES
+ * FOR THE MARKUP OF THE DEFINITION LIST THAT THE
+ * PLUGIN GENERATES. YOU CAN OVERRIDE DEFAULTS WITH
+ * "!important" AS USUAL.
+ */
+
+/* Stuff that affects the whole block of [gloss]...[/gloss] */
+
+.cb-gloss {
+
+}
+
+.cb-gloss + br {
+	display: none; /* This makes a possible superfluous new line after [/gloss] disappear */
+}
+
+/* Stuff that affects only the <dl>...</dl> part (the container
+ * for the definition list, hence <dl>)
+ */
+
+.cb-gloss dl {
+}
+
+
+ * and <dd> (their definition, i.e. subsequent lines)
+ */
+
+.cb-gloss dt, .cb-gloss dd {
+}
+
+/* Define the behavior of small caps */
+
+.cb-gloss .smcp {
+
+	/* This turns anything uppercase into lowercase first, then
+	 * turns this into small capitals if your font supports them.
+	 * Otherwise the text will simply be scaled-down uppercase
+	 * characters if your browser supports that *at all*.
+	 */
+
+	text-transform: lowercase;
+	font-variant: small-caps;
+	
+	/* These are optional. It produces nice, oldstyle numerals
+	 * if your font supports them. The feature is not yet supported
+	 * by all browsers, or only inofficially so.
+	 */
+	 
+	-moz-font-feature-settings: "onum=1";		/* Magic for Mozilla products */
+	-webkit-font-feature-settings: "onum=1";	/* Magic for Chrome, Safari etc. */
+	-ms-font-feature-settings: "onum=1";		/* Magic for Internet Explorer */
+	-o-font-feature-settings: "onum=1";		/* Magic for Opera */
+	font-feature-settings: "onum=1";		/* Just in case */
+}
